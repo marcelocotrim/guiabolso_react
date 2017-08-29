@@ -20,7 +20,7 @@ module.exports = {
   ],
   output: {
     path: __dirname,
-    filename: './public/[name].bundle.js',
+    filename: './docs/[name].bundle.js',
     publicPath: '/'
   },
   resolve: {
