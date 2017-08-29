@@ -11,11 +11,6 @@ const theme = createMuiTheme({
   palette: createPalette({
     primary: lightBlue,
   }),
-  progress: {
-    position: 'absolute',
-    left: '50vw',
-    top: '50vh',
-  },
 });
 
 class App extends Component {

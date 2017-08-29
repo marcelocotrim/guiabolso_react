@@ -18,9 +18,22 @@ class Footer extends Component {
     const classes = this.props.classes;
     return (
       <div className={classes.root}>
+        <a href="mailto:marcelocotrim.com">
+          <Typography component="p" className={classes.typography}>
+            {'marcelocotrim@gmail.com'}
+          </Typography>
+        </a>
         <Typography component="p" className={classes.typography}>
-          {'© 2017 Marcelo Cotrim'}
+          {'+55 21 99405-3508'}
         </Typography>
+        <Typography component="p" className={classes.typography}>
+          {'Rio de Janeiro - Brazil'}
+        </Typography>
+        <a href="https://marcelocotrim.com" target="_blank" rel="noopener noreferrer">
+          <Typography component="p" className={classes.typography} style={{marginTop: 20}}>
+            {'© 2017 Marcelo Cotrim'}
+          </Typography>
+        </a>
       </div>
     )
   }

@@ -73,7 +73,7 @@ class Joke extends Component {
                 }} >
                   Back
                 </Button>
-                <Button dense color="primary" href={joke.url} target="_blank">
+                <Button dense color="primary" href={joke.url} target="_blank" rel="noopener noreferrer">
                   Link
                 </Button>
               </CardActions>
