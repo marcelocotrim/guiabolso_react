@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import { MuiThemeProvider, createMuiTheme, createPalette } from 'material-ui';
 import { lightBlue } from 'material-ui/colors';
 import NavBar from 'NavBar';
