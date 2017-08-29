@@ -2,7 +2,6 @@ const webpack = require('webpack')
 
 module.exports = {
   entry: [
-    // 'script-loader!jquery/dist/jquery.min.js',
     './src/index.jsx'
   ],
   plugins: [
@@ -11,15 +10,10 @@ module.exports = {
         'NODE_ENV': JSON.stringify('development'),
       }
     }),
-    // new webpack.ProvidePlugin({
-    //   '$': 'jquery',
-    //   'jQuery': 'jquery',
-    //   'window.jQuery': 'jquery',
-    // }),
   ],
   output: {
     path: __dirname,
-    filename: './public/[name].bundle.js',
+    filename: './docs/[name].bundle.js',
     publicPath: '/'
   },
   devServer: {
