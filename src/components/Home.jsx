@@ -36,9 +36,6 @@ class Home extends Component {
     return (
       <div className={classes.root} >
         <Grid className={classes.grid} >
-          {isLoading &&
-            <CircularProgress size={40}/>
-          }
           {!isLoading &&
             <div>
               <img className={classes.image} src="assets/chucknorris_logo_coloured_small@2x.png"/>

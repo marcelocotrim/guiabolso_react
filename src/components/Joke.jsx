@@ -41,9 +41,6 @@ class Joke extends Component {
     const { joke, isLoading, classes } = this.props;
     return (
       <div className={classes.root}>
-        {isLoading &&
-          <CircularProgress size={40}/>
-        }
         {joke &&
           <Card className={classes.card}>
             <img className={classes.avatar} src={joke.icon_url} />
