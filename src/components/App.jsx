@@ -3,7 +3,6 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import { MuiThemeProvider, createMuiTheme, createPalette } from 'material-ui';
 import { lightBlue } from 'material-ui/colors';
 import NavBar from 'NavBar';
-import Footer from 'Footer';
 import ScrollToTop from 'ScrollToTop';
 import routes from './../routes';
 
@@ -29,7 +28,6 @@ class App extends Component {
                 }
               </Switch>
             </ScrollToTop>
-            <Footer />
           </div>
         </MuiThemeProvider>
       </Router>

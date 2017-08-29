@@ -9,9 +9,10 @@ import { fetchCategories } from 'actions';
 const styles = theme => ({
   root: {
     backgroundColor: '#f5f5f5',
-    minHeight: '75vh',
+    minHeight: '100vh',
     marginTop: 64,
     padding: 10,
+    paddingBottom: 40,
     textAlign: 'center'
   },
   row: {
@@ -51,7 +52,10 @@ class Home extends Component {
             <div>
               <img className={classes.image} src="assets/chucknorris_logo_coloured_small@2x.png"/>
               <Typography type="display1" className={classes.typography}>
-                Categories List
+                Categories
+              </Typography>
+              <Typography className={classes.typography}>
+                Choose a category
               </Typography>
               <div className={classes.row}>
                 <Paper>

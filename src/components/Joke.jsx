@@ -16,7 +16,7 @@ import { fetchJoke, resetJokePage } from 'actions'
 const styles = theme => ({
   root: {
     backgroundColor: '#f5f5f5',
-    minHeight: '75vh',
+    minHeight: '100vh',
     marginTop: 64,
     padding: 10,
     textAlign: 'center'
