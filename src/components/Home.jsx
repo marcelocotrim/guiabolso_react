@@ -41,7 +41,7 @@ class Home extends Component {
           }
           {!isLoading &&
             <div>
-              <img className={classes.image} src="/assets/chucknorris_logo_coloured_small@2x.png"/>
+              <img className={classes.image} src="assets/chucknorris_logo_coloured_small@2x.png"/>
               <Typography type="display1" className={classes.typography}>
                 Categories List
               </Typography>
