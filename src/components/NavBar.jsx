@@ -9,9 +9,6 @@ const styles = theme => ({
   image: {
     margin: 10,
   },
-  logo: {
-    float: 'right'
-  }
 });
 
 class NavBar extends Component {
@@ -20,10 +17,7 @@ class NavBar extends Component {
     return (
       <AppBar className={classes.navbar} position="fixed">
         <Toolbar>
-          <img className={classes.image} height={34} src="assets/logo.png" href="/"/>
-          <Hidden mdDown>
-            <img className={[classes.image, classes.logo]} height={44} src="assets/guiabolso.png"/>
-          </Hidden>
+          <img className={classes.image} height={44} src="assets/guiabolso.png"/>
         </Toolbar>
       </AppBar>
     )

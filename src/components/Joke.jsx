@@ -6,10 +6,11 @@ import {
   Card,
   CardActions,
   CardContent,
-  CircularProgress,
   Typography,
   withStyles
 } from 'material-ui';
+import { lightBlue } from 'material-ui/colors'
+import ReactLoading from 'react-loading'
 import { fetchJoke, resetJokePage } from 'actions'
 
 const styles = theme => ({
@@ -20,6 +21,11 @@ const styles = theme => ({
     padding: 10,
     textAlign: 'center'
   },
+  image: {
+    maxWidth: 360,
+    width: '50vw',
+    marginBottom: 40
+  },
   card: {
     maxWidth: 400,
     margin: '0 auto'
@@ -28,6 +34,12 @@ const styles = theme => ({
     margin: 10,
     width: 40
   },
+  progress: {
+    top: '50%',
+    left: '50%',
+    position: 'absolute',
+    transform: 'translateY(-50%, -50%)'
+  }
 });
 
 class Joke extends Component {
@@ -41,26 +53,32 @@ class Joke extends Component {
     const { joke, isLoading, classes } = this.props;
     return (
       <div className={classes.root}>
-        {joke &&
-          <Card className={classes.card}>
-            <img className={classes.avatar} src={joke.icon_url} />
-            <CardContent>
-              <Typography component="p">
-                {joke.value}
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button dense color="primary" onClick={(e) => {
-                e.preventDefault()
-                this.props.history.push('/')
-              }} >
-                Back
-              </Button>
-              <Button dense color="primary" href={joke.url} target="_blank">
-                Link
-              </Button>
-            </CardActions>
-          </Card>
+        {isLoading &&
+          <ReactLoading className={classes.progress} delay={0} type={'spin'} color={lightBlue['500']} height={24} width={24} />
+        }
+        {!isLoading && joke &&
+          <div>
+            <img className={classes.image} src="assets/chucknorris_logo_coloured_small@2x.png"/>
+            <Card className={classes.card}>
+              <img className={classes.avatar} src={joke.icon_url} />
+              <CardContent>
+                <Typography component="p">
+                  {joke.value}
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button dense color="primary" onClick={(e) => {
+                  e.preventDefault()
+                  this.props.history.push('/')
+                }} >
+                  Back
+                </Button>
+                <Button dense color="primary" href={joke.url} target="_blank">
+                  Link
+                </Button>
+              </CardActions>
+            </Card>
+          </div>
         }
       </div>
     )

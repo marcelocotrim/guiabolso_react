@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { CircularProgress, Grid, List, ListItem, ListItemText, Paper, Typography, withStyles } from 'material-ui';
+import { Grid, List, ListItem, ListItemText, Paper, Typography, withStyles } from 'material-ui';
+import { lightBlue } from 'material-ui/colors'
+import ReactLoading from 'react-loading'
 import { fetchCategories } from 'actions';
 
-const styles = {
+const styles = theme => ({
   root: {
     backgroundColor: '#f5f5f5',
     minHeight: '75vh',
@@ -24,8 +26,14 @@ const styles = {
     maxWidth: 360,
     width: '50vw',
     marginBottom: 40
+  },
+  progress: {
+    top: '50%',
+    left: '50%',
+    position: 'absolute',
+    transform: 'translateY(-50%, -50%)'
   }
-};
+});
 
 class Home extends Component {
   componentWillMount() {
@@ -36,6 +44,9 @@ class Home extends Component {
     return (
       <div className={classes.root} >
         <Grid className={classes.grid} >
+          {isLoading &&
+            <ReactLoading className={classes.progress} delay={0} type={'spin'} color={lightBlue['500']} height={24} width={24} />
+          }
           {!isLoading &&
             <div>
               <img className={classes.image} src="assets/chucknorris_logo_coloured_small@2x.png"/>
