@@ -20,9 +20,9 @@ class NavBar extends Component {
     return (
       <AppBar className={classes.navbar} position="fixed">
         <Toolbar>
-          <img className={classes.image} height={34} src="/guiabolso_react/assets/logo.png" href="/"/>
+          <img className={classes.image} height={34} src="assets/logo.png" href="/"/>
           <Hidden mdDown>
-            <img className={[classes.image, classes.logo]} height={44} src="/guiabolso_react/assets/guiabolso.png"/>
+            <img className={[classes.image, classes.logo]} height={44} src="assets/guiabolso.png"/>
           </Hidden>
         </Toolbar>
       </AppBar>
