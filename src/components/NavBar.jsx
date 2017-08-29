@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { AppBar, Hidden, Toolbar, withStyles } from 'material-ui';
+import { AppBar, Toolbar, withStyles } from 'material-ui';
 
 const styles = theme => ({
   navbar: {
     height: 64
-  },
-  image: {
-    margin: 10,
   },
 });
 
@@ -17,7 +14,7 @@ class NavBar extends Component {
     return (
       <AppBar className={classes.navbar} position="fixed">
         <Toolbar>
-          <img className={classes.image} height={44} src="assets/guiabolso.png"/>
+          <img height={44} src="assets/guiabolso.png"/>
         </Toolbar>
       </AppBar>
     )
