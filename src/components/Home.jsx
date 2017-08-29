@@ -24,7 +24,7 @@ const styles = {
     maxWidth: 360,
     width: '50vw',
     marginBottom: 40
-  },
+  }
 };
 
 class Home extends Component {
@@ -37,7 +37,7 @@ class Home extends Component {
       <div className={classes.root} >
         <Grid className={classes.grid} >
           {isLoading &&
-            <CircularProgress className={classes.progress}/>
+            <CircularProgress size={40}/>
           }
           {!isLoading &&
             <div>

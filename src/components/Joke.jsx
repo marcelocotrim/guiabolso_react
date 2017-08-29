@@ -24,10 +24,6 @@ const styles = theme => ({
     maxWidth: 400,
     margin: '0 auto'
   },
-  progress: {
-    textAlign: 'center',
-    justifyContent: 'center',
-  },
   avatar: {
     margin: 10,
     width: 40
@@ -46,7 +42,7 @@ class Joke extends Component {
     return (
       <div className={classes.root}>
         {isLoading &&
-          <CircularProgress className={classes.progress}/>
+          <CircularProgress size={40}/>
         }
         {joke &&
           <Card className={classes.card}>
