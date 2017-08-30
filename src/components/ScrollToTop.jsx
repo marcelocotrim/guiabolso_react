@@ -1,3 +1,5 @@
+// Componente para fazer abrir cada rota com scroll no topo
+
 import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';

@@ -1,3 +1,5 @@
+// Componente da Home com a lista de Categorias
+
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';

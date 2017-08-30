@@ -1,3 +1,5 @@
+// Componente da Joke com o detalhe de uma joke aleatória
+
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';

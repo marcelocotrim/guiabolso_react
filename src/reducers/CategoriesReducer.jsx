@@ -1,3 +1,5 @@
+// Estados relacionados ao componente de listagem das categorias de "joke"
+
 import {
   FETCH_CATEGORIES,
   FETCH_CATEGORIES_SUCCESS,

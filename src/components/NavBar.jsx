@@ -1,3 +1,5 @@
+// Componente da barra de navegação superior
+
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
@@ -51,8 +53,7 @@ class NavBar extends Component {
           <ListItemIcon>
             <Phone />
           </ListItemIcon>
-          <ListItemText primary="Phone" />
-          <ListSubheader>{'21 99405-3508'}</ListSubheader>
+          <ListItemText primary="21 99405-3508" />
         </ListItem>
         <ListSubheader>{'© Copyright 2017'}</ListSubheader>
       </div>

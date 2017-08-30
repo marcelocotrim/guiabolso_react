@@ -1,3 +1,5 @@
+// Principal componente da aplicação
+
 import React, { Component } from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import { MuiThemeProvider, createMuiTheme, createPalette } from 'material-ui';
@@ -6,6 +8,7 @@ import NavBar from 'NavBar';
 import ScrollToTop from 'ScrollToTop';
 import routes from './../routes';
 
+// Customização do tema do Material UI
 const theme = createMuiTheme({
   palette: createPalette({
     primary: lightBlue,

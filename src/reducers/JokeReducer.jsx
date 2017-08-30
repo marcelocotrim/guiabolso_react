@@ -1,3 +1,5 @@
+// Estados relacionados ao componente de detalhe da "joke"
+
 import {
   FETCH_JOKE,
   FETCH_JOKE_SUCCESS,
