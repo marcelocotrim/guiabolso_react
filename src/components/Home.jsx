@@ -34,7 +34,7 @@ const styles = theme => ({
     top: '50%',
     left: '50%',
     position: 'absolute',
-    transform: 'translateY(-50%, -50%)'
+    transform: 'translate(-50%, -50%)'
   }
 });
 
